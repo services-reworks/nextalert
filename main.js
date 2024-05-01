@@ -12,9 +12,11 @@ function test_get() {
 
 
 function addrow() {
-
-    const url = "https://script.google.com/macros/s/AKfycbzSOZKBKWzaEjVORtSnZBy6PD2OarMVfOZpKrK3EwczJQl59By6ECvG8csxivA4c6Z9/exec"
-
+    // {"symbol":"S50M24","timeframe":1,"price":900,"event":"rsi_overbought","indicator_name":"RSI","indicator_value":81}
+  
+    //const url = "https://script.google.com/macros/s/AKfycbzSOZKBKWzaEjVORtSnZBy6PD2OarMVfOZpKrK3EwczJQl59By6ECvG8csxivA4c6Z9/exec"
+    const url = "https://script.google.com/macros/s/AKfycbyFPFISBMXpDB8xhWrpdLt7q8JXr6ETq2g6kiJHWngB4nSxHa8F4ppuvq9xcRACSqZZ/exec";
+    
     fetch(url, {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         mode: "no-cors", // no-cors, *cors, same-origin
@@ -24,7 +26,15 @@ function addrow() {
         },
         redirect: "follow", // manual, *follow, error
         //referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-        body: JSON.stringify( {name: "Olivia"} ), // body data type must match "Content-Type" header
+        body: JSON.stringify( {
+            symbol: "S50M24",
+            timeframe: 5,
+            price: 800,
+            event: "rsi_overbought",
+            indicator_name: "rsi",
+            indicator_value: 90.8
+            
+        } ), // body data type must match "Content-Type" header
     });
 
     //-- done.
