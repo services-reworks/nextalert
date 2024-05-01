@@ -1,7 +1,8 @@
 function test_get() {
 
-    const url = "https://script.google.com/macros/s/AKfycbzSOZKBKWzaEjVORtSnZBy6PD2OarMVfOZpKrK3EwczJQl59By6ECvG8csxivA4c6Z9/exec"
-
+    //const url = "https://script.google.com/macros/s/AKfycbzSOZKBKWzaEjVORtSnZBy6PD2OarMVfOZpKrK3EwczJQl59By6ECvG8csxivA4c6Z9/exec"
+    const url = "https://script.google.com/macros/s/AKfycbyFPFISBMXpDB8xhWrpdLt7q8JXr6ETq2g6kiJHWngB4nSxHa8F4ppuvq9xcRACSqZZ/exec";
+   
     fetch(url)
         .then(d => d.json())
         .then(d => {
